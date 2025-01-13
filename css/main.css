@@ -356,4 +356,17 @@ main .flowers-right {
   border: 1px solid var(--main-color-2);
 }
 
+#see-you {
+  font-size: 30px;
+  color: var(--main-color);
+  text-align: center;
+  padding-top: 50px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #see-you {
+    font-size: 50px;
+    padding-bottom: 30px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
