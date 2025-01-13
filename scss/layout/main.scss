@@ -1,3 +1,16 @@
+main{
+    .flowers-left{
+        position: absolute;
+        left: 0%;
+        z-index: -1;
+    }
+    .flowers-right{
+        position: absolute;
+        right: 0%;
+        z-index: -1;
+    }
+}
+
 #date{
     .countdown-container{
         display: flex;
