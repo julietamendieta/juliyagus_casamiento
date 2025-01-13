@@ -71,6 +71,26 @@
             }            
         }
     }
+    .dress-code{
+        text-align: center;
+        padding-bottom: 20px;
+        h5{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            color: var(--main-color);
+            @include media-query-maxitablet{
+                font-size: 30px;
+            }
+        }
+        p{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            color: var(--main-color);
+            @include media-query-maxitablet{
+                font-size: 26px;
+            }
+        }
+    }
 }
 
 #photo-app{

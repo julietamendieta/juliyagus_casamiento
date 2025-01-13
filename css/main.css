@@ -146,6 +146,30 @@ header .hr2 {
   background-color: var(--main-color);
   border: 1px solid var(--main-color-2);
 }
+#date .dress-code {
+  text-align: center;
+  padding-bottom: 20px;
+}
+#date .dress-code h5 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: var(--main-color);
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #date .dress-code h5 {
+    font-size: 30px;
+  }
+}
+#date .dress-code p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: var(--main-color);
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #date .dress-code p {
+    font-size: 26px;
+  }
+}
 
 #photo-app {
   background-color: var(--secondary-color);
