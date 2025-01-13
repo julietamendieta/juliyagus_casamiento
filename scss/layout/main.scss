@@ -1,0 +1,224 @@
+#date{
+    .countdown-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        @include media-query-maxitablet{
+            margin-top: 40px;
+        }
+        h2{
+            color: var(--main-color);
+            font-size: 60px;
+            font-weight: 300;
+            @include media-query-maxitablet{
+                font-size: 100px;
+            }
+        }
+        
+        h3{
+            color: var(--main-color);
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            font-size: 90px;
+            @include media-query-maxitablet{
+                font-size: 200px;
+            }
+        }
+        
+        .message{
+            text-align: center;
+            font-weight: 500;
+            font-size: 60px;
+            @include media-query-maxitablet{
+                font-size: 100px;
+            }
+        }
+    }
+    .save-date{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h4{
+            color: var(--main-color);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 200;
+            text-align: center;
+            padding: 20px 40px;
+            @include media-query-maxitablet{
+                font-size: 40px;
+            }
+        }
+        .confirmation{
+            color: var(--main-color);
+            border: 1px solid var(--main-color);
+            background-color: var(--main-color-2);
+            border-radius: 10px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 12px;
+            margin-bottom: 30px;
+            @include media-query-maxitablet{
+                font-size: 30px;
+            }
+            &:active{
+                color: var(--main-color-2);
+                background-color: var(--main-color);
+                border: 1px solid var(--main-color-2);
+            }            
+        }
+    }
+}
+
+#photo-app{
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding-bottom: 20px;
+    h5{
+        font-family: 'Open-Sans', sans-serif;
+        font-size: 18px;
+        color: var(--main-color-2);
+        padding: 20px 40px;
+        @include media-query-maxitablet{
+            font-size: 30px;
+            padding: 30px 10px;
+        }
+    }
+    .teams{
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        padding-bottom: 20px;
+        h6{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: var(--main-color-2);
+            padding-bottom: 10px;
+            @include media-query-maxitablet{
+                font-size: 26px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+    .hr3{
+        background-color: var(--main-color-2);
+        height: 1px;
+        width: 60%;
+        border: 1px solid var(--main-color-2);
+        border-radius: 10px;
+        margin-left: 20%;
+    }
+    
+    .qr img{
+        height: 100px;
+        padding-bottom: 10px;
+        @include media-query-maxitablet{
+            height: 200px;
+            padding-bottom: 20px;
+        }
+    }
+    .link-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .link-app{
+            padding: 10px;
+        }
+        a{
+            color: var(--main-color-2);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            @include media-query-maxitablet{
+                font-size: 30px;
+                padding: 30px 10px;
+            }
+        }
+    }
+}
+
+#gift{
+    .future{
+        font-family: 'Ms Madi', sans-serif;
+        font-size: 38px;
+        font-weight: 500;
+        color: var(--main-color);
+        text-align: center;
+        padding: 10px 24px;
+        @include media-query-maxitablet{
+            font-size: 80px;
+        }
+    }
+    .present{
+        color: var(--main-color);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        text-align: center;
+        padding: 0 40px;
+        @include media-query-maxitablet{
+            font-size: 30px;
+            padding: 20px 20px;
+        }
+    }
+    .info{
+        text-align: center;
+        padding: 20px;
+        background-color: var(--main-color);
+        margin: 20px 40px;
+        border-radius: 10px;
+        p{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            color: var(--main-color-2);
+            @include media-query-maxitablet{
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+#game{
+    background-color: var(--secondary-color);
+    text-align: center;
+    h5{
+        font-family: 'Open-Sans', sans-serif;
+        font-size: 20px;
+        color: var(--main-color-2);
+        padding: 20px 40px;
+        @include media-query-maxitablet{
+            font-size: 30px;
+            padding: 30px 10px;
+        }
+    }
+    p{
+        font-size: 16px;
+        color: var(--main-color-2);
+        font-family: 'Open-Sans', sans-serif;
+        padding: 10px 40px;
+        @include media-query-maxitablet{
+            font-size: 24px;
+        }
+    }
+    .game-button{
+        color: var(--main-color);
+        border: 1px solid var(--main-color);
+        background-color: var(--main-color-2);
+        border-radius: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 8px 12px;
+        margin-bottom: 30px;
+        @include media-query-maxitablet{
+            font-size: 30px;
+        }
+        &:active{
+            color: var(--main-color-2);
+            background-color: var(--main-color);
+            border: 1px solid var(--main-color-2);
+        } 
+    }
+}

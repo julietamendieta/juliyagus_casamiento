@@ -1,0 +1,317 @@
+body {
+  background-image: url(../../images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ms Madi", sans-serif;
+  --main-color: #F7C4A9;
+  --main-color-2: #22312A;
+  --secondary-color: rgb(247, 196, 169, 0.53);
+}
+
+header .photo {
+  height: 50vh;
+  background-image: url(../../images/pareja1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 576px) {
+  header .photo {
+    background-image: url(../../images/parejamobile.png);
+    height: 30vh;
+  }
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  header .photo {
+    height: 70vh;
+  }
+}
+header h1 {
+  text-align: center;
+  color: var(--main-color);
+  font-size: 200px;
+  font-weight: 200;
+}
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 70px;
+  }
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  header h1 {
+    font-size: 100px;
+  }
+}
+header .hr1 {
+  height: 1px;
+  width: 80%;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 6px;
+}
+header .hr2 {
+  height: 1px;
+  width: 80%;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  margin-left: 19%;
+}
+
+#date .countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #date .countdown-container {
+    margin-top: 40px;
+  }
+}
+#date .countdown-container h2 {
+  color: var(--main-color);
+  font-size: 60px;
+  font-weight: 300;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #date .countdown-container h2 {
+    font-size: 100px;
+  }
+}
+#date .countdown-container h3 {
+  color: var(--main-color);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 90px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #date .countdown-container h3 {
+    font-size: 200px;
+  }
+}
+#date .countdown-container .message {
+  text-align: center;
+  font-weight: 500;
+  font-size: 60px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #date .countdown-container .message {
+    font-size: 100px;
+  }
+}
+#date .save-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#date .save-date h4 {
+  color: var(--main-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  text-align: center;
+  padding: 20px 40px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #date .save-date h4 {
+    font-size: 40px;
+  }
+}
+#date .save-date .confirmation {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  background-color: var(--main-color-2);
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  margin-bottom: 30px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #date .save-date .confirmation {
+    font-size: 30px;
+  }
+}
+#date .save-date .confirmation:active {
+  color: var(--main-color-2);
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color-2);
+}
+
+#photo-app {
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding-bottom: 20px;
+}
+#photo-app h5 {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 18px;
+  color: var(--main-color-2);
+  padding: 20px 40px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #photo-app h5 {
+    font-size: 30px;
+    padding: 30px 10px;
+  }
+}
+#photo-app .teams {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding-bottom: 20px;
+}
+#photo-app .teams h6 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: var(--main-color-2);
+  padding-bottom: 10px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #photo-app .teams h6 {
+    font-size: 26px;
+    padding-bottom: 20px;
+  }
+}
+#photo-app .hr3 {
+  background-color: var(--main-color-2);
+  height: 1px;
+  width: 60%;
+  border: 1px solid var(--main-color-2);
+  border-radius: 10px;
+  margin-left: 20%;
+}
+#photo-app .qr img {
+  height: 100px;
+  padding-bottom: 10px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #photo-app .qr img {
+    height: 200px;
+    padding-bottom: 20px;
+  }
+}
+#photo-app .link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#photo-app .link-container .link-app {
+  padding: 10px;
+}
+#photo-app .link-container a {
+  color: var(--main-color-2);
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #photo-app .link-container a {
+    font-size: 30px;
+    padding: 30px 10px;
+  }
+}
+
+#gift .future {
+  font-family: "Ms Madi", sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  color: var(--main-color);
+  text-align: center;
+  padding: 10px 24px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #gift .future {
+    font-size: 80px;
+  }
+}
+#gift .present {
+  color: var(--main-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  padding: 0 40px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #gift .present {
+    font-size: 30px;
+    padding: 20px 20px;
+  }
+}
+#gift .info {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--main-color);
+  margin: 20px 40px;
+  border-radius: 10px;
+}
+#gift .info p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: var(--main-color-2);
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #gift .info p {
+    font-size: 30px;
+  }
+}
+
+#game {
+  background-color: var(--secondary-color);
+  text-align: center;
+}
+#game h5 {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 20px;
+  color: var(--main-color-2);
+  padding: 20px 40px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #game h5 {
+    font-size: 30px;
+    padding: 30px 10px;
+  }
+}
+#game p {
+  font-size: 16px;
+  color: var(--main-color-2);
+  font-family: "Open-Sans", sans-serif;
+  padding: 10px 40px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #game p {
+    font-size: 24px;
+  }
+}
+#game .game-button {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  background-color: var(--main-color-2);
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  margin-bottom: 30px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #game .game-button {
+    font-size: 30px;
+  }
+}
+#game .game-button:active {
+  color: var(--main-color-2);
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color-2);
+}
+
+/*# sourceMappingURL=main.css.map */
