@@ -188,6 +188,37 @@ main .flowers-right {
     font-size: 26px;
   }
 }
+#date .add-date {
+  text-align: center;
+  margin: 20px;
+}
+#date .add-date a {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  text-decoration: none;
+  align-items: center;
+}
+#date .add-date a .save {
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  background-color: var(--main-color-2);
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #date .add-date a .save {
+    font-size: 30px;
+  }
+}
+#date .add-date a .save:active {
+  color: var(--main-color-2);
+  background-color: var(--secondary-color);
+  border: 1px solid var(--main-color-2);
+}
 
 #photo-app {
   background-color: var(--secondary-color);
