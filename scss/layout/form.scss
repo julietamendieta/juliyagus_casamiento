@@ -1,0 +1,56 @@
+.register{
+    background-color: var(--main-color);
+    margin: 10px 50px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 5;
+    display: none;
+    h5{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        text-align: center;
+        color: var(--main-color-2);
+        padding: 20px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        .form-fields{
+            text-align: center;
+            p{
+                font-family: 'Open Sans', sans-serif;
+                color: var(--main-color-2);
+                font-size: 16px;
+                padding-bottom: 5px;
+            }
+            .form-field{
+                background-color: var(--secondary-color);
+                border: 1px solid var(--main-color-2);
+                margin-bottom: 20px;
+                width: 80%;
+                border-radius: 5px;
+            }
+        }
+        .form-button{
+            max-width: fit-content;
+            align-self: center;
+            margin-bottom: 20px;
+            padding: 8px 12px;
+            background-color: var(--main-color-2);
+            border: 1px solid var(--main-color);
+            border-radius: 10px;
+            color: var(--main-color);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            &:active{
+                background-color: var(--main-color);
+                border: 1px solid var(--main-color-2);
+                color: var(--main-color-2);
+            }
+        }
+    }
+}
+
+.active{
+    display: unset;
+}
