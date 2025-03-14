@@ -3,7 +3,7 @@ const faltan = document.querySelector(".faltan");
 const dias = document.querySelector(".dias");
 const message = document.querySelector(".message")
 
-const countdownDate = new Date('09/27/2025').getTime();
+const countdownDate = new Date('11/08/2025').getTime();
 
 let interval = setInterval(() => {
     const now = new Date().getTime();
