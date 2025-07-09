@@ -53,15 +53,37 @@ main{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        width: 80%;
+        margin: auto;
         h4{
             color: var(--main-color);
             font-family: 'Open Sans', sans-serif;
             font-size: 20px;
             font-weight: 200;
             text-align: center;
-            padding: 20px 40px;
+            padding: 20px -10px;
             @include media-query-maxitablet{
                 font-size: 40px;
+            }
+        }
+        .salon{
+            color: var(--main-color);
+            font-family: 'Ms Madi', sans-serif;
+            font-size: 40px;
+            @include media-query-maxitablet{
+                font-size: 70px;
+            }
+        }
+        p{
+            color: var(--main-color);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 200;
+            text-align: center;
+            padding: 20px;
+            @include media-query-maxitablet{
+                font-size: 30px;
             }
         }
         .confirmation{
@@ -70,18 +92,24 @@ main{
             background-color: var(--main-color-2);
             border-radius: 10px;
             font-family: 'Open Sans', sans-serif;
-            font-size: 16px;
+            font-size: 20px;
             font-weight: 500;
             padding: 8px 12px;
             margin-bottom: 30px;
+            text-decoration: none;
             @include media-query-maxitablet{
                 font-size: 30px;
+            }
+            &:hover{
+                color: var(--main-color-2);
+                background-color: var(--secondary-color);
+                border: 1px solid var(--main-color-2);
             }
             &:active{
                 color: var(--main-color-2);
                 background-color: var(--secondary-color);
                 border: 1px solid var(--main-color-2);
-            }            
+            }              
         }
     }
     .dress-code{
@@ -105,35 +133,38 @@ main{
         }
     }
     .add-date{
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
         margin: 20px;
-        a{
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+        .save{
             text-decoration: none;
-            align-items: center;
-           .save{
             color: var(--secondary-color);
             border: 1px solid var(--secondary-color);
             background-color: var(--main-color-2);
             border-radius: 10px;
             font-family: 'Open Sans', sans-serif;
-            font-size: 14px;
+            font-size: 20px;
             font-weight: 500;
-            padding: 4px 8px;
+            padding: 8px 12px;
             @include media-query-maxitablet{
                 font-size: 30px;
+            }
+            &:hover{
+                color: var(--main-color-2);
+                background-color: var(--secondary-color);
+                border: 1px solid var(--main-color-2);
             }
             &:active{
                 color: var(--main-color-2);
                 background-color: var(--secondary-color);
                 border: 1px solid var(--main-color-2);
-            }            
-            } 
-        }
+            }             
+        } 
     }
 }
+
 
 #photo-app{
     background-color: var(--secondary-color);
@@ -203,6 +234,14 @@ main{
 }
 
 #gift{
+    .futuro{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 20px;
+        @include media-query-maxitablet{
+            width: 80%;
+        }
+    }
     .future{
         font-family: 'Ms Madi', sans-serif;
         font-size: 38px;
@@ -229,8 +268,10 @@ main{
         text-align: center;
         padding: 20px;
         background-color: var(--secondary-color);
-        margin: 20px 40px;
+        width: 50%;
+        margin: auto;
         border-radius: 10px;
+        margin-bottom: 40px;
         p{
             font-family: 'Open Sans', sans-serif;
             font-size: 18px;
@@ -278,6 +319,11 @@ main{
             font-size: 30px;
         }
         &:active{
+            color: var(--main-color-2);
+            background-color: var(--secondary-color);
+            border: 1px solid var(--main-color-2);
+        }
+        &:hover{
             color: var(--main-color-2);
             background-color: var(--secondary-color);
             border: 1px solid var(--main-color-2);
