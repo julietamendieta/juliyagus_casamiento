@@ -29,7 +29,9 @@ header .photo {
 @media (max-width: 576px) {
   header .photo {
     background-image: url(../../images/parejamobile.png);
-    height: 30vh;
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
@@ -144,6 +146,7 @@ main .flowers-right {
 @media (min-width: 1024px) and (max-width: 2400px) {
   #date .save-date h4 {
     font-size: 40px;
+    max-width: 70%;
   }
 }
 #date .save-date .salon {
@@ -252,6 +255,34 @@ main .flowers-right {
   color: var(--main-color-2);
   background-color: var(--secondary-color);
   border: 1px solid var(--main-color-2);
+}
+
+.carrusel {
+  background-color: var(--main-color);
+  height: 320px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.carrusel .imagen {
+  height: 280px;
+  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-2600px);
+    transform: translateX(-2600px);
+  }
+}
+.carrusel .imagen img {
+  height: 280px;
+  border-radius: 10px;
+  padding: 0 10px;
 }
 
 #photo-app {
@@ -372,6 +403,11 @@ main .flowers-right {
   margin: auto;
   border-radius: 10px;
   margin-bottom: 40px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #gift .info {
+    max-width: 50%;
+  }
 }
 #gift .info p {
   font-family: "Open Sans", sans-serif;

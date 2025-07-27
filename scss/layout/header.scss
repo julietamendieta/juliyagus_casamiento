@@ -6,7 +6,9 @@ header{
         background-repeat: no-repeat;
         @include media-query-mobile{
             background-image: url(../../images/parejamobile.png);
-            height: 30vh;
+            height: 40vh;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
         @include media-query-maxitablet{
             height: 70vh;
