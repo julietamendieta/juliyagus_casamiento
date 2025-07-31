@@ -423,33 +423,29 @@ main .flowers-right {
 #game {
   background-color: var(--secondary-color);
   text-align: center;
-  padding-bottom: 24px;
 }
 #game h5 {
   font-family: "Open-Sans", sans-serif;
   font-size: 20px;
   color: var(--main-color-2);
-  padding: 24px 40px;
+  padding: 20px 40px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #game h5 {
     font-size: 30px;
-    padding: 24px 10px;
+    padding: 30px 10px;
   }
 }
 #game p {
   font-size: 16px;
   color: var(--main-color-2);
   font-family: "Open-Sans", sans-serif;
-  padding: 5px 40px;
+  padding: 10px 40px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #game p {
     font-size: 24px;
   }
-}
-#game p:last-of-type {
-  padding-bottom: 30px;
 }
 #game .game-button {
   color: var(--secondary-color);
@@ -460,6 +456,7 @@ main .flowers-right {
   font-size: 16px;
   font-weight: 500;
   padding: 8px 12px;
+  margin-bottom: 30px;
   text-decoration: none;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
@@ -549,4 +546,4 @@ main .flowers-right {
   display: unset;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=app.css.map */
