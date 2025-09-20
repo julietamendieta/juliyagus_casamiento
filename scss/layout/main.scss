@@ -17,9 +17,10 @@ main{
         flex-direction: column;
         align-items: center;                                                                                     
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
         @include media-query-maxitablet{
-            margin-top: 40px;
+            margin-top: 50px;
         }
         h2{
             color: var(--main-color);
@@ -59,8 +60,8 @@ main{
         h4{
             color: var(--main-color);
             font-family: 'Open Sans', sans-serif;
-            font-size: 20px;
-            font-weight: 200;
+            font-size: 24px;
+            font-weight: 500;
             text-align: center;
             padding: 20px -10px;
             @include media-query-maxitablet{
