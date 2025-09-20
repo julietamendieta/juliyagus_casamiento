@@ -173,9 +173,9 @@ main .flowers-right {
   }
 }
 #date .save-date .confirmation {
-  color: var(--secondary-color);
+  color: var(--main-color-2);
   border: 1px solid var(--secondary-color);
-  background-color: var(--main-color-2);
+  background-color: var(--secondary-color);
   border-radius: 10px;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
@@ -190,14 +190,14 @@ main .flowers-right {
   }
 }
 #date .save-date .confirmation:hover {
-  color: var(--main-color-2);
-  background-color: var(--secondary-color);
-  border: 1px solid var(--main-color-2);
+  color: var(--secondary-color);
+  background-color: var(--main-color-2);
+  border: 1px solid var(--secondary-color);
 }
 #date .save-date .confirmation:active {
-  color: var(--main-color-2);
-  background-color: var(--secondary-color);
-  border: 1px solid var(--main-color-2);
+  color: var(--secondary-color);
+  background-color: var(--main-color-2);
+  border: 1px solid var(--secondary-color);
 }
 #date .dress-code {
   text-align: center;
@@ -232,9 +232,9 @@ main .flowers-right {
 }
 #date .add-date .save {
   text-decoration: none;
-  color: var(--secondary-color);
-  border: 1px solid var(--secondary-color);
-  background-color: var(--main-color-2);
+  color: var(--main-color-2);
+  border: 1px solid var(--main-color-2);
+  background-color: var(--secondary-color);
   border-radius: 10px;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
@@ -247,18 +247,40 @@ main .flowers-right {
   }
 }
 #date .add-date .save:hover {
-  color: var(--main-color-2);
-  background-color: var(--secondary-color);
-  border: 1px solid var(--main-color-2);
+  color: var(--secondary-color);
+  background-color: var(--main-color-2);
+  border: 1px solid var(--secondary-color);
 }
 #date .add-date .save:active {
   color: var(--main-color-2);
-  background-color: var(--secondary-color);
-  border: 1px solid var(--main-color-2);
+  background-color: var(--main-color-2);
+  border: 1px solid var(--secondary-color);
+}
+
+#civil {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#civil h4 {
+  color: var(--main-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 10px;
+}
+#civil h3 {
+  color: var(--main-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
 }
 
 .carrusel {
-  background-color: var(--main-color);
+  background-color: var(--main-color-2);
   height: 320px;
   display: flex;
   align-items: center;
