@@ -21,22 +21,22 @@ body {
 }
 
 header .photo {
-  height: 50vh;
-  background-image: url(../../images/pareja1.png);
+  height: 100vh;
+  background-image: url(../../images/72.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 @media (max-width: 576px) {
   header .photo {
-    background-image: url(../../images/parejamobile.png);
-    height: 40vh;
+    background-image: url(../../images/78.jpg);
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
   }
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   header .photo {
-    height: 70vh;
+    height: 100vh;
   }
 }
 header h1 {

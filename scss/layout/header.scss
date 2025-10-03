@@ -1,17 +1,17 @@
 header{
     .photo{
-        height: 50vh;
-        background-image: url(../../images/pareja1.png);
+        height: 100vh;
+        background-image: url(../../images/72.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         @include media-query-mobile{
-            background-image: url(../../images/parejamobile.png);
-            height: 40vh;
+            background-image: url(../../images/78.jpg);
+            height: 100vh;
             background-size: cover;
             background-repeat: no-repeat;
         }
         @include media-query-maxitablet{
-            height: 70vh;
+            height: 100vh;
         }
     }
     h1{
