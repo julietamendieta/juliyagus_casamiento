@@ -54,23 +54,9 @@ body {
 
 header {
   scroll-snap-align: start;
-  scroll-snap-type: y mandatory;
   height: 100vh;
-  overflow: auto;
-}
-header .flowers-left {
-  position: absolute;
-  left: 0%;
-  z-index: -1;
-}
-header .flowers-right {
-  position: absolute;
-  right: 0%;
-  z-index: -1;
 }
 header .photo {
-  scroll-snap-align: start;
-  height: 100vh;
   background-image: url(../../images/72.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -88,72 +74,20 @@ header .photo {
     height: 100vh;
   }
 }
-header #titulo {
-  scroll-snap-align: start;
-  height: 100vh;
+header h1 {
   color: var(--main-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-header #titulo img {
-  opacity: 60%;
-}
-header #titulo #nombres {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-@media (min-width: 1024px) and (max-width: 2400px) {
-  header #titulo #nombres {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 60px;
-  }
-}
-header #titulo h2 {
-  animation: aparicion linear both;
-  animation-timeline: view();
-  animation-range: entry 10% cover 30%;
-  font-size: 300px;
-  font-weight: 500;
-}
-@media (max-width: 768px) {
-  header #titulo h2 {
-    font-size: 150px;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  header #titulo h2 {
-    font-size: 200px;
-  }
-}
-header #titulo h3 {
-  animation: aparicion linear both;
-  animation-timeline: view();
-  animation-range: entry 10% cover 30%;
-  font-size: 150px;
+  font-size: 80px;
   font-weight: 400;
-  padding-top: 30px;
-}
-@media (max-width: 768px) {
-  header #titulo h3 {
-    font-size: 80px;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  header #titulo h3 {
-    font-size: 100px;
-  }
+  text-align: center;
+  z-index: 100;
+  background-color: var(--main-color-2);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 main {
   scroll-snap-align: start;
-  scroll-snap-type: y mandatory;
-  height: 100vh;
-  overflow: auto;
 }
 main .flowers-left {
   position: absolute;
@@ -166,10 +100,15 @@ main .flowers-right {
   z-index: -1;
 }
 
-#date {
+#secciones {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow: auto;
+}
+#secciones #date {
   scroll-snap-align: start;
 }
-#date .date .countdown-container {
+#secciones #date .date .countdown-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -177,14 +116,14 @@ main .flowers-right {
   justify-content: center;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #date .date .countdown-container {
+  #secciones #date .date .countdown-container {
     margin-top: 50px;
   }
 }
-#date .date .countdown-container .texto {
+#secciones #date .date .countdown-container .texto {
   text-align: center;
 }
-#date .date .countdown-container .texto h2 {
+#secciones #date .date .countdown-container .texto h2 {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -193,11 +132,11 @@ main .flowers-right {
   font-weight: 400;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #date .date .countdown-container .texto h2 {
+  #secciones #date .date .countdown-container .texto h2 {
     font-size: 200px;
   }
 }
-#date .date .countdown-container .texto h3 {
+#secciones #date .date .countdown-container .texto h3 {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -207,11 +146,11 @@ main .flowers-right {
   font-size: 150px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #date .date .countdown-container .texto h3 {
+  #secciones #date .date .countdown-container .texto h3 {
     font-size: 250px;
   }
 }
-#date .date .countdown-container .texto .message {
+#secciones #date .date .countdown-container .texto .message {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -220,15 +159,14 @@ main .flowers-right {
   font-size: 60px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #date .date .countdown-container .texto .message {
+  #secciones #date .date .countdown-container .texto .message {
     font-size: 100px;
   }
 }
-
-#save-date {
+#secciones #save-date {
   scroll-snap-align: start;
 }
-#save-date .texto-date {
+#secciones #save-date .texto-date {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -237,18 +175,18 @@ main .flowers-right {
   width: 60%;
   margin: auto;
 }
-#save-date .texto-date .fuegos {
+#secciones #save-date .texto-date .fuegos {
   width: 40%;
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #save-date .texto-date .fuegos {
+  #secciones #save-date .texto-date .fuegos {
     width: 20%;
   }
 }
-#save-date .texto-date h4 {
+#secciones #save-date .texto-date h4 {
   color: var(--main-color);
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
@@ -260,12 +198,12 @@ main .flowers-right {
   animation-range: entry 10% cover 30%;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #save-date .texto-date h4 {
+  #secciones #save-date .texto-date h4 {
     font-size: 80px;
     max-width: 70%;
   }
 }
-#save-date .texto-date .salon {
+#secciones #save-date .texto-date .salon {
   color: var(--main-color);
   font-family: "Ms Madi", sans-serif;
   font-size: 40px;
@@ -275,11 +213,11 @@ main .flowers-right {
   animation-range: entry 10% cover 30%;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #save-date .texto-date .salon {
+  #secciones #save-date .texto-date .salon {
     font-size: 100px;
   }
 }
-#save-date .texto-date p {
+#secciones #save-date .texto-date p {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -291,11 +229,11 @@ main .flowers-right {
   padding: 20px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #save-date .texto-date p {
+  #secciones #save-date .texto-date p {
     font-size: 40px;
   }
 }
-#save-date .texto-date .confirmation {
+#secciones #save-date .texto-date .confirmation {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -311,52 +249,51 @@ main .flowers-right {
   text-decoration: none;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #save-date .texto-date .confirmation {
+  #secciones #save-date .texto-date .confirmation {
     font-size: 50px;
   }
 }
-#save-date .texto-date .confirmation:hover {
+#secciones #save-date .texto-date .confirmation:hover {
   color: var(--secondary-color);
   background-color: var(--main-color-2);
   border: 1px solid var(--secondary-color);
 }
-#save-date .texto-date .confirmation:active {
+#secciones #save-date .texto-date .confirmation:active {
   color: var(--secondary-color);
   background-color: var(--main-color-2);
   border: 1px solid var(--secondary-color);
 }
-#save-date .texto-date .dress-code {
+#secciones #save-date .texto-date .dress-code {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
   text-align: center;
   padding-top: 20px;
 }
-#save-date .texto-date .dress-code h5 {
+#secciones #save-date .texto-date .dress-code h5 {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
   color: var(--main-color);
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #save-date .texto-date .dress-code h5 {
+  #secciones #save-date .texto-date .dress-code h5 {
     font-size: 40px;
   }
 }
-#save-date .texto-date .dress-code p {
+#secciones #save-date .texto-date .dress-code p {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   color: var(--main-color);
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #save-date .texto-date .dress-code p {
+  #secciones #save-date .texto-date .dress-code p {
     font-size: 40px;
   }
 }
-
-#civil {
+#secciones #civil {
   scroll-snap-align: start;
 }
-#civil .texto-civil {
+#secciones #civil .texto-civil {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -365,18 +302,18 @@ main .flowers-right {
   width: 70%;
   margin: auto;
 }
-#civil .texto-civil .anillos {
+#secciones #civil .texto-civil .anillos {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
   width: 30%;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #civil .texto-civil .anillos {
+  #secciones #civil .texto-civil .anillos {
     width: 20%;
   }
 }
-#civil .texto-civil h4 {
+#secciones #civil .texto-civil h4 {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -388,11 +325,11 @@ main .flowers-right {
   padding-bottom: 10px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #civil .texto-civil h4 {
+  #secciones #civil .texto-civil h4 {
     font-size: 40px;
   }
 }
-#civil .texto-civil h3 {
+#secciones #civil .texto-civil h3 {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -404,12 +341,11 @@ main .flowers-right {
   padding: 10px 0;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #civil .texto-civil h3 {
+  #secciones #civil .texto-civil h3 {
     font-size: 46px;
   }
 }
-
-#photo-app {
+#secciones #photo-app {
   scroll-snap-align: start;
   height: 100vh;
   display: flex;
@@ -419,7 +355,7 @@ main .flowers-right {
   text-align: center;
   padding-bottom: 20px;
 }
-#photo-app h5 {
+#secciones #photo-app h5 {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -429,12 +365,12 @@ main .flowers-right {
   padding: 20px 40px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #photo-app h5 {
+  #secciones #photo-app h5 {
     font-size: 50px;
     padding: 30px 10px;
   }
 }
-#photo-app .teams {
+#secciones #photo-app .teams {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -443,19 +379,19 @@ main .flowers-right {
   text-align: center;
   padding-bottom: 20px;
 }
-#photo-app .teams h6 {
+#secciones #photo-app .teams h6 {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: var(--main-color-2);
   padding-bottom: 10px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #photo-app .teams h6 {
+  #secciones #photo-app .teams h6 {
     font-size: 40px;
     padding-bottom: 20px;
   }
 }
-#photo-app .hr3 {
+#secciones #photo-app .hr3 {
   background-color: var(--main-color-2);
   height: 1px;
   width: 60%;
@@ -463,7 +399,7 @@ main .flowers-right {
   border-radius: 10px;
   margin-left: 20%;
 }
-#photo-app .qr img {
+#secciones #photo-app .qr img {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -471,12 +407,12 @@ main .flowers-right {
   padding-bottom: 10px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #photo-app .qr img {
+  #secciones #photo-app .qr img {
     height: 200px;
     padding-bottom: 20px;
   }
 }
-#photo-app .link-container {
+#secciones #photo-app .link-container {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -484,23 +420,22 @@ main .flowers-right {
   justify-content: center;
   align-items: center;
 }
-#photo-app .link-container .link-app {
+#secciones #photo-app .link-container .link-app {
   padding: 10px;
 }
-#photo-app .link-container a {
+#secciones #photo-app .link-container a {
   color: var(--main-color-2);
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #photo-app .link-container a {
+  #secciones #photo-app .link-container a {
     font-size: 40px;
     padding: 30px 10px;
   }
 }
-
-#gift {
+#secciones #gift {
   scroll-snap-align: start;
   height: 100vh;
   display: flex;
@@ -508,29 +443,29 @@ main .flowers-right {
   justify-content: center;
   align-items: center;
 }
-#gift img {
+#secciones #gift img {
   width: 20%;
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #gift img {
+  #secciones #gift img {
     width: 10%;
   }
 }
-#gift .futuro {
+#secciones #gift .futuro {
   width: 90%;
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #gift .futuro {
+  #secciones #gift .futuro {
     width: 80%;
   }
 }
-#gift .future {
+#secciones #gift .future {
   font-family: "Ms Madi", sans-serif;
   font-size: 38px;
   font-weight: 500;
@@ -539,11 +474,11 @@ main .flowers-right {
   padding: 10px 24px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #gift .future {
+  #secciones #gift .future {
     font-size: 100px;
   }
 }
-#gift .present {
+#secciones #gift .present {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -554,12 +489,12 @@ main .flowers-right {
   padding: 0 40px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #gift .present {
+  #secciones #gift .present {
     font-size: 40px;
     padding: 20px 20px;
   }
 }
-#gift .info {
+#secciones #gift .info {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -571,22 +506,21 @@ main .flowers-right {
   border-radius: 10px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #gift .info {
+  #secciones #gift .info {
     max-width: 50%;
   }
 }
-#gift .info p {
+#secciones #gift .info p {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   color: var(--main-color-2);
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #gift .info p {
+  #secciones #gift .info p {
     font-size: 40px;
   }
 }
-
-#game {
+#secciones #game {
   scroll-snap-align: start;
   background-color: var(--secondary-color);
   text-align: center;
@@ -596,18 +530,18 @@ main .flowers-right {
   justify-content: center;
   align-items: center;
 }
-#game img {
+#secciones #game img {
   width: 20%;
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #game img {
+  #secciones #game img {
     width: 10%;
   }
 }
-#game h5 {
+#secciones #game h5 {
   font-family: "Open-Sans", sans-serif;
   font-size: 20px;
   color: var(--main-color-2);
@@ -617,12 +551,12 @@ main .flowers-right {
   animation-range: entry 10% cover 30%;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #game h5 {
+  #secciones #game h5 {
     font-size: 50px;
     padding: 24px 10px;
   }
 }
-#game p {
+#secciones #game p {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -632,14 +566,14 @@ main .flowers-right {
   padding: 5px 40px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #game p {
+  #secciones #game p {
     font-size: 40px;
   }
 }
-#game p:last-of-type {
+#secciones #game p:last-of-type {
   padding-bottom: 30px;
 }
-#game .game-button {
+#secciones #game .game-button {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -654,22 +588,21 @@ main .flowers-right {
   text-decoration: none;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #game .game-button {
+  #secciones #game .game-button {
     font-size: 40px;
   }
 }
-#game .game-button:active {
+#secciones #game .game-button:active {
   color: var(--main-color-2);
   background-color: var(--secondary-color);
   border: 1px solid var(--main-color-2);
 }
-#game .game-button:hover {
+#secciones #game .game-button:hover {
   color: var(--main-color-2);
   background-color: var(--secondary-color);
   border: 1px solid var(--main-color-2);
 }
-
-#see-you {
+#secciones #see-you {
   font-size: 30px;
   color: var(--main-color);
   text-align: center;
@@ -677,7 +610,7 @@ main .flowers-right {
   padding-bottom: 30px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #see-you {
+  #secciones #see-you {
     font-size: 70px;
     padding-bottom: 30px;
   }
