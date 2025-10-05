@@ -9,40 +9,20 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   */
-  scroll-snap-type: y mandatory;
-  height: 100vh;
-  overflow: auto;
 }
 
-#progreso {
-  position: fixed;
-  top: 0;
-  width: 0%;
-  background-color: var(--main-color);
-  height: 10px;
-  z-index: 10;
-  animation: progreso-barra auto linear;
-  animation-timeline: scroll();
+/*
+@keyframes aparicion{
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
 }
-
-@keyframes progreso-barra {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes aparicion {
-  from {
-    opacity: 0;
-    scale: 25%;
-  }
-  to {
-    opacity: 1;
-    scale: 100%;
-  }
-}
+*/
 * {
   margin: 0;
   padding: 0;
@@ -52,29 +32,34 @@ body {
   --secondary-color: #E4E5E0;
 }
 
-header {
+@keyframes desaparicion {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+#secciones {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow: auto;
+}
+#secciones .photo {
   scroll-snap-align: start;
   height: 100vh;
-}
-header .photo {
   background-image: url(../../images/72.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 @media (max-width: 768px) {
-  header .photo {
+  #secciones .photo {
     background-image: url(../../images/78.jpg);
-    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
   }
 }
-@media (min-width: 1024px) and (max-width: 2400px) {
-  header .photo {
-    height: 100vh;
-  }
-}
-header h1 {
+#secciones .photo h1 {
   color: var(--main-color);
   font-size: 80px;
   font-weight: 400;
@@ -84,26 +69,7 @@ header h1 {
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-
-main {
-  scroll-snap-align: start;
-}
-main .flowers-left {
-  position: absolute;
-  left: 0%;
-  z-index: -1;
-}
-main .flowers-right {
-  position: absolute;
-  right: 0%;
-  z-index: -1;
-}
-
-#secciones {
-  scroll-snap-type: y mandatory;
-  height: 100vh;
-  overflow: auto;
+  opacity: 90%;
 }
 #secciones #date {
   scroll-snap-align: start;
@@ -207,7 +173,6 @@ main .flowers-right {
   color: var(--main-color);
   font-family: "Ms Madi", sans-serif;
   font-size: 40px;
-  padding: 20px 0 0 0;
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
@@ -262,33 +227,6 @@ main .flowers-right {
   color: var(--secondary-color);
   background-color: var(--main-color-2);
   border: 1px solid var(--secondary-color);
-}
-#secciones #save-date .texto-date .dress-code {
-  animation: aparicion linear both;
-  animation-timeline: view();
-  animation-range: entry 10% cover 30%;
-  text-align: center;
-  padding-top: 20px;
-}
-#secciones #save-date .texto-date .dress-code h5 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 20px;
-  color: var(--main-color);
-}
-@media (min-width: 1024px) and (max-width: 2400px) {
-  #secciones #save-date .texto-date .dress-code h5 {
-    font-size: 40px;
-  }
-}
-#secciones #save-date .texto-date .dress-code p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-  color: var(--main-color);
-}
-@media (min-width: 1024px) and (max-width: 2400px) {
-  #secciones #save-date .texto-date .dress-code p {
-    font-size: 40px;
-  }
 }
 #secciones #civil {
   scroll-snap-align: start;

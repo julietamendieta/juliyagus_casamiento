@@ -1,14 +1,9 @@
-main{
-    scroll-snap-align: start;
-    .flowers-left{
-        position: absolute;
-        left: 0%;
-        z-index: -1;
+@keyframes desaparicion{
+    from{
+        opacity: 1;
     }
-    .flowers-right{
-        position: absolute;
-        right: 0%;
-        z-index: -1;
+    to{
+        opacity: 0;
     }
 }
 
@@ -16,6 +11,31 @@ main{
     scroll-snap-type: y mandatory;
     height: 100vh;
     overflow: auto;
+    .photo{
+        scroll-snap-align: start;
+        height: 100vh;
+        background-image: url(../../images/72.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include media-query-mobile{
+            background-image: url(../../images/78.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1{
+        color: var(--main-color);
+        font-size: 80px;
+        font-weight: 400;
+        text-align: center;
+        z-index: 100;
+        background-color: var(--main-color-2);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        opacity: 90%;
+        }
+    }
+
     #date{
         scroll-snap-align: start;
         .date{
@@ -68,7 +88,6 @@ main{
             }
         }
     }
-
     #save-date{
         scroll-snap-align: start;
         .texto-date{
@@ -107,7 +126,6 @@ main{
                 color: var(--main-color);
                 font-family: 'Ms Madi', sans-serif;
                 font-size: 40px;
-                padding: 20px 0 0 0;
                 animation: aparicion linear both;
                 animation-timeline: view();
                 animation-range: entry 10% cover 30%;
@@ -156,29 +174,6 @@ main{
                     background-color: var(--main-color-2);
                     border: 1px solid var(--secondary-color);
                 }              
-            }
-            .dress-code{
-                animation: aparicion linear both;
-                animation-timeline: view();
-                animation-range: entry 10% cover 30%;
-                text-align: center;
-                padding-top: 20px;
-                h5{
-                    font-family: 'Open Sans', sans-serif;
-                    font-size: 20px;
-                    color: var(--main-color);
-                    @include media-query-maxitablet{
-                        font-size: 40px;
-                    }
-                }
-                p{
-                    font-family: 'Open Sans', sans-serif;
-                    font-size: 18px;
-                    color: var(--main-color);
-                    @include media-query-maxitablet{
-                        font-size: 40px;
-                    }
-                }
             }
         }
     }
