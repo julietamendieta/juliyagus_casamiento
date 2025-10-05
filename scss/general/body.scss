@@ -10,3 +10,23 @@ body{
     background-repeat: no-repeat;
     */
 }
+
+#progreso{
+    position: fixed;
+    top: 0;
+    width: 0%;
+    background-color: var(--main-color);
+    height: 10px;
+
+    animation: progreso-barra auto linear;
+    animation-timeline: scroll();
+}
+
+@keyframes progreso-barra{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}

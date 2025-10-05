@@ -11,6 +11,24 @@ body {
   */
 }
 
+#progreso {
+  position: fixed;
+  top: 0;
+  width: 0%;
+  background-color: var(--main-color);
+  height: 10px;
+  animation: progreso-barra auto linear;
+  animation-timeline: scroll();
+}
+
+@keyframes progreso-barra {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +38,23 @@ body {
   --secondary-color: #E4E5E0;
 }
 
+header {
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+header .flowers-left {
+  position: absolute;
+  left: 0%;
+  z-index: -1;
+}
+header .flowers-right {
+  position: absolute;
+  right: 0%;
+  z-index: -1;
+}
 header .photo {
+  scroll-snap-align: start;
   height: 100vh;
   background-image: url(../../images/72.jpg);
   background-size: cover;
@@ -39,40 +73,56 @@ header .photo {
     height: 100vh;
   }
 }
-header h1 {
-  text-align: center;
+header #titulo {
+  scroll-snap-align: start;
+  height: 100vh;
   color: var(--main-color);
-  font-size: 200px;
-  font-weight: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header #titulo img {
+  opacity: 60%;
+}
+header #titulo #nombres {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  header #titulo #nombres {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+  }
+}
+header #titulo h2 {
+  font-size: 150px;
+  font-weight: 500;
 }
 @media (max-width: 576px) {
-  header h1 {
-    font-size: 70px;
+  header #titulo h2 {
+    font-size: 150px;
   }
 }
 @media (min-width: 576px) and (max-width: 1024px) {
-  header h1 {
-    font-size: 100px;
+  header #titulo h2 {
+    font-size: 150px;
   }
 }
-header .hr1 {
-  height: 1px;
-  width: 80%;
-  background-color: var(--main-color);
-  border: 1px solid var(--main-color);
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  margin-bottom: 6px;
-}
-header .hr2 {
-  height: 1px;
-  width: 80%;
-  background-color: var(--main-color);
-  border: 1px solid var(--main-color);
-  border-radius: 10px;
-  margin-left: 19%;
+header #titulo h3 {
+  font-size: 80px;
+  font-weight: 400;
+  padding-top: 30px;
 }
 
+main {
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
 main .flowers-left {
   position: absolute;
   left: 0%;
@@ -84,7 +134,17 @@ main .flowers-right {
   z-index: -1;
 }
 
-#date .countdown-container {
+#date {
+  scroll-snap-align: start;
+}
+#date .date {
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+#date .date .countdown-container {
+  scroll-snap-align: start;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,74 +153,80 @@ main .flowers-right {
   margin-bottom: 50px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #date .countdown-container {
+  #date .date .countdown-container {
     margin-top: 50px;
   }
 }
-#date .countdown-container h2 {
+#date .date .countdown-container h2 {
   color: var(--main-color);
-  font-size: 60px;
+  font-size: 100px;
   font-weight: 300;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #date .countdown-container h2 {
+  #date .date .countdown-container h2 {
     font-size: 100px;
   }
 }
-#date .countdown-container h3 {
+#date .date .countdown-container h3 {
   color: var(--main-color);
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  font-size: 90px;
+  font-size: 150px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #date .countdown-container h3 {
+  #date .date .countdown-container h3 {
     font-size: 200px;
   }
 }
-#date .countdown-container .message {
+#date .date .countdown-container .message {
   text-align: center;
   font-weight: 500;
   font-size: 60px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #date .countdown-container .message {
+  #date .date .countdown-container .message {
     font-size: 100px;
   }
 }
-#date .save-date {
+#date .date .save-date {
+  scroll-snap-align: start;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 60%;
   margin: auto;
 }
-#date .save-date h4 {
+#date .date .save-date .fuegos {
+  width: 40%;
+}
+#date .date .save-date h4 {
   color: var(--main-color);
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
   font-weight: 500;
   text-align: center;
-  padding: 20px -10px;
+  padding: 10px 0;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #date .save-date h4 {
+  #date .date .save-date h4 {
     font-size: 40px;
     max-width: 70%;
   }
 }
-#date .save-date .salon {
+#date .date .save-date .salon {
   color: var(--main-color);
   font-family: "Ms Madi", sans-serif;
   font-size: 40px;
+  padding: 20px 0 0 0;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #date .save-date .salon {
+  #date .date .save-date .salon {
     font-size: 70px;
   }
 }
-#date .save-date p {
+#date .date .save-date p {
   color: var(--main-color);
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
@@ -169,11 +235,11 @@ main .flowers-right {
   padding: 20px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #date .save-date p {
+  #date .date .save-date p {
     font-size: 30px;
   }
 }
-#date .save-date .confirmation {
+#date .date .save-date .confirmation {
   color: var(--main-color-2);
   border: 1px solid var(--secondary-color);
   background-color: var(--secondary-color);
@@ -186,52 +252,52 @@ main .flowers-right {
   text-decoration: none;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #date .save-date .confirmation {
+  #date .date .save-date .confirmation {
     font-size: 30px;
   }
 }
-#date .save-date .confirmation:hover {
+#date .date .save-date .confirmation:hover {
   color: var(--secondary-color);
   background-color: var(--main-color-2);
   border: 1px solid var(--secondary-color);
 }
-#date .save-date .confirmation:active {
+#date .date .save-date .confirmation:active {
   color: var(--secondary-color);
   background-color: var(--main-color-2);
   border: 1px solid var(--secondary-color);
 }
-#date .dress-code {
+#date .date .save-date .dress-code {
   text-align: center;
   padding-bottom: 20px;
 }
-#date .dress-code h5 {
+#date .date .save-date .dress-code h5 {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
   color: var(--main-color);
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #date .dress-code h5 {
+  #date .date .save-date .dress-code h5 {
     font-size: 30px;
   }
 }
-#date .dress-code p {
+#date .date .save-date .dress-code p {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   color: var(--main-color);
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #date .dress-code p {
+  #date .date .save-date .dress-code p {
     font-size: 26px;
   }
 }
-#date .add-date {
+#date .date .add-date {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   margin: 20px;
 }
-#date .add-date .save {
+#date .date .add-date .save {
   text-decoration: none;
   color: var(--main-color-2);
   border: 1px solid var(--main-color-2);
@@ -243,51 +309,63 @@ main .flowers-right {
   padding: 8px 12px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #date .add-date .save {
+  #date .date .add-date .save {
     font-size: 30px;
   }
 }
-#date .add-date .save:hover {
+#date .date .add-date .save:hover {
   color: var(--secondary-color);
   background-color: var(--main-color-2);
   border: 1px solid var(--secondary-color);
 }
-#date .add-date .save:active {
+#date .date .add-date .save:active {
   color: var(--main-color-2);
   background-color: var(--main-color-2);
   border: 1px solid var(--secondary-color);
 }
-
-#civil {
-  width: 80%;
+#date .date #civil {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 70%;
   margin: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
-#civil h4 {
+#date .date #civil .anillos {
+  width: 30%;
+}
+#date .date #civil h4 {
   color: var(--main-color);
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   padding-bottom: 10px;
 }
-#civil h3 {
+#date .date #civil h3 {
   color: var(--main-color);
   font-family: "Open Sans", sans-serif;
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
+  padding: 10px 0;
 }
 
-.carrusel {
+#carrusel, #carrusel2 {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+#carrusel .carrusel, #carrusel2 .carrusel {
+  height: 100vh;
   background-color: var(--main-color-2);
-  height: 320px;
+  height: auto;
   display: flex;
   align-items: center;
   overflow: hidden;
 }
-.carrusel .imagen {
+#carrusel .carrusel .imagen, #carrusel2 .carrusel .imagen {
   height: 280px;
   animation: scroll 40s linear infinite;
   -webkit-animation: scroll 40s linear infinite;
@@ -302,13 +380,18 @@ main .flowers-right {
     transform: translateX(-2600px);
   }
 }
-.carrusel .imagen img {
+#carrusel .carrusel .imagen img, #carrusel2 .carrusel .imagen img {
   height: 280px;
   border-radius: 10px;
   margin: 0 5px;
 }
 
 #photo-app {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: var(--secondary-color);
   text-align: center;
   padding-bottom: 20px;
@@ -382,10 +465,19 @@ main .flowers-right {
   }
 }
 
+#gift {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#gift img {
+  width: 20%;
+}
 #gift .futuro {
-  width: 100%;
-  margin: auto;
-  margin-bottom: 20px;
+  width: 90%;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #gift .futuro {
@@ -421,11 +513,10 @@ main .flowers-right {
 #gift .info {
   text-align: center;
   padding: 20px;
+  margin-top: 20px;
   background-color: var(--secondary-color);
-  width: 80%;
-  margin: auto;
+  width: 70%;
   border-radius: 10px;
-  margin-bottom: 40px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #gift .info {
@@ -444,9 +535,17 @@ main .flowers-right {
 }
 
 #game {
+  scroll-snap-align: start;
   background-color: var(--secondary-color);
   text-align: center;
-  padding-bottom: 24px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#game img {
+  width: 20%;
 }
 #game h5 {
   font-family: "Open-Sans", sans-serif;
@@ -502,6 +601,8 @@ main .flowers-right {
 }
 
 #see-you {
+  scroll-snap-align: start;
+  height: 100vh;
   font-size: 30px;
   color: var(--main-color);
   text-align: center;
