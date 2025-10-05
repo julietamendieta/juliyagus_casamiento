@@ -1,4 +1,8 @@
 header{
+    scroll-snap-align: start;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow: auto;
     .flowers-left{
         position: absolute;
         left: 0%;
@@ -10,6 +14,7 @@ header{
         z-index: -1;
     }
     .photo{
+        scroll-snap-align: start;
         height: 100vh;
         background-image: url(../../images/72.jpg);
         background-size: cover;
@@ -25,6 +30,7 @@ header{
         }
     }
     #titulo{
+        scroll-snap-align: start;
         height: 100vh;
         color: var(--main-color);
         display: flex;

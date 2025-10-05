@@ -9,6 +9,9 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     */
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow: auto;
 }
 
 #progreso{
