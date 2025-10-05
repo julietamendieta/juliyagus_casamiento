@@ -17,6 +17,7 @@ body {
   width: 0%;
   background-color: var(--main-color);
   height: 10px;
+  z-index: 10;
   animation: progreso-barra auto linear;
   animation-timeline: scroll();
 }
@@ -64,7 +65,7 @@ header .photo {
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   header .photo {
     background-image: url(../../images/78.jpg);
     height: 100vh;
@@ -105,26 +106,36 @@ header #titulo h2 {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
-  font-size: 150px;
+  font-size: 300px;
   font-weight: 500;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   header #titulo h2 {
     font-size: 150px;
   }
 }
-@media (min-width: 576px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   header #titulo h2 {
-    font-size: 150px;
+    font-size: 200px;
   }
 }
 header #titulo h3 {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
-  font-size: 80px;
+  font-size: 150px;
   font-weight: 400;
   padding-top: 30px;
+}
+@media (max-width: 768px) {
+  header #titulo h3 {
+    font-size: 80px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  header #titulo h3 {
+    font-size: 100px;
+  }
 }
 
 main .flowers-left {
@@ -144,8 +155,6 @@ main .flowers-right {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #date .date .countdown-container {
@@ -161,11 +170,11 @@ main .flowers-right {
   animation-range: entry 10% cover 30%;
   color: var(--main-color);
   font-size: 100px;
-  font-weight: 300;
+  font-weight: 400;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #date .date .countdown-container .texto h2 {
-    font-size: 100px;
+    font-size: 200px;
   }
 }
 #date .date .countdown-container .texto h3 {
@@ -179,7 +188,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #date .date .countdown-container .texto h3 {
-    font-size: 200px;
+    font-size: 250px;
   }
 }
 #date .date .countdown-container .texto .message {
@@ -210,6 +219,11 @@ main .flowers-right {
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
 }
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #date .date .save-date .texto-date .fuegos {
+    width: 20%;
+  }
+}
 #date .date .save-date .texto-date h4 {
   color: var(--main-color);
   font-family: "Open Sans", sans-serif;
@@ -223,7 +237,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #date .date .save-date .texto-date h4 {
-    font-size: 40px;
+    font-size: 80px;
     max-width: 70%;
   }
 }
@@ -238,7 +252,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #date .date .save-date .texto-date .salon {
-    font-size: 70px;
+    font-size: 100px;
   }
 }
 #date .date .save-date .texto-date p {
@@ -254,7 +268,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #date .date .save-date .texto-date p {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 #date .date .save-date .texto-date .confirmation {
@@ -274,7 +288,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #date .date .save-date .texto-date .confirmation {
-    font-size: 30px;
+    font-size: 50px;
   }
 }
 #date .date .save-date .texto-date .confirmation:hover {
@@ -292,7 +306,7 @@ main .flowers-right {
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
   text-align: center;
-  padding-bottom: 20px;
+  padding-top: 20px;
 }
 #date .date .save-date .texto-date .dress-code h5 {
   font-family: "Open Sans", sans-serif;
@@ -301,7 +315,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #date .date .save-date .texto-date .dress-code h5 {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 #date .date .save-date .texto-date .dress-code p {
@@ -311,7 +325,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #date .date .save-date .texto-date .dress-code p {
-    font-size: 26px;
+    font-size: 40px;
   }
 }
 #date .date .add-date {
@@ -362,6 +376,11 @@ main .flowers-right {
   animation-range: entry 10% cover 30%;
   width: 30%;
 }
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #date .date #civil .texto-civil .anillos {
+    width: 20%;
+  }
+}
 #date .date #civil .texto-civil h4 {
   animation: aparicion linear both;
   animation-timeline: view();
@@ -372,6 +391,11 @@ main .flowers-right {
   font-weight: 600;
   text-align: center;
   padding-bottom: 10px;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #date .date #civil .texto-civil h4 {
+    font-size: 40px;
+  }
 }
 #date .date #civil .texto-civil h3 {
   animation: aparicion linear both;
@@ -384,33 +408,34 @@ main .flowers-right {
   text-align: center;
   padding: 10px 0;
 }
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #date .date #civil .texto-civil h3 {
+    font-size: 46px;
+  }
+}
 
 .carrusel {
   background-color: var(--main-color-2);
-  height: auto;
+  height: 60vh;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  overflow-x: scroll;
+  margin-bottom: 40px;
 }
-.carrusel .imagen {
-  height: 280px;
-  animation: scroll 40s linear infinite;
-  -webkit-animation: scroll 40s linear infinite;
-}
-@keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-2600px);
-    transform: translateX(-2600px);
+@media (max-width: 768px) {
+  .carrusel {
+    height: 100vh;
   }
 }
 .carrusel .imagen img {
-  height: 280px;
+  height: 600px;
   border-radius: 10px;
   margin: 0 5px;
+}
+@media (max-width: 768px) {
+  .carrusel .imagen img {
+    height: 400px;
+  }
 }
 
 #photo-app {
@@ -433,7 +458,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #photo-app h5 {
-    font-size: 30px;
+    font-size: 50px;
     padding: 30px 10px;
   }
 }
@@ -454,7 +479,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #photo-app .teams h6 {
-    font-size: 26px;
+    font-size: 40px;
     padding-bottom: 20px;
   }
 }
@@ -498,7 +523,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #photo-app .link-container a {
-    font-size: 30px;
+    font-size: 40px;
     padding: 30px 10px;
   }
 }
@@ -515,6 +540,11 @@ main .flowers-right {
   animation: aparicion linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #gift img {
+    width: 10%;
+  }
 }
 #gift .futuro {
   width: 90%;
@@ -537,7 +567,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #gift .future {
-    font-size: 80px;
+    font-size: 100px;
   }
 }
 #gift .present {
@@ -552,7 +582,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #gift .present {
-    font-size: 30px;
+    font-size: 40px;
     padding: 20px 20px;
   }
 }
@@ -579,7 +609,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #gift .info p {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 
@@ -598,6 +628,11 @@ main .flowers-right {
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
 }
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #game img {
+    width: 10%;
+  }
+}
 #game h5 {
   font-family: "Open-Sans", sans-serif;
   font-size: 20px;
@@ -609,7 +644,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #game h5 {
-    font-size: 30px;
+    font-size: 50px;
     padding: 24px 10px;
   }
 }
@@ -624,7 +659,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #game p {
-    font-size: 24px;
+    font-size: 40px;
   }
 }
 #game p:last-of-type {
@@ -646,7 +681,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #game .game-button {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 #game .game-button:active {
@@ -669,7 +704,7 @@ main .flowers-right {
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
   #see-you {
-    font-size: 50px;
+    font-size: 70px;
     padding-bottom: 30px;
   }
 }

@@ -17,6 +17,7 @@ body{
     width: 0%;
     background-color: var(--main-color);
     height: 10px;
+    z-index: 10;
 
     animation: progreso-barra auto linear;
     animation-timeline: scroll();

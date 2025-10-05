@@ -49,22 +49,28 @@ header{
             animation: aparicion linear both;
             animation-timeline: view();
             animation-range: entry 10% cover 30%;
-            font-size: 150px;
+            font-size: 300px;
             font-weight: 500;
             @include media-query-mobile{
-            font-size: 150px;
+                font-size: 150px;
             }
             @include media-query-tablet{
-                font-size: 150px;
+                font-size: 200px;
             }
         }
         h3{
             animation: aparicion linear both;
             animation-timeline: view();
             animation-range: entry 10% cover 30%;
-            font-size: 80px;
+            font-size: 150px;
             font-weight: 400;
             padding-top: 30px;
+            @include media-query-mobile{
+                font-size: 80px;
+            }
+            @include media-query-tablet{
+                font-size: 100px;
+            }
         }
     }
 }
