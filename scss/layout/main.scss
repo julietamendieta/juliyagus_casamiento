@@ -1,7 +1,4 @@
 main{
-    height: 100vh;
-    overflow: auto;
-    scroll-snap-type: y mandatory;
     .flowers-left{
         position: absolute;
         left: 0%;
@@ -15,13 +12,8 @@ main{
 }
 
 #date{
-    scroll-snap-align: start;
     .date{
-        height: 100vh;
-        overflow: auto;
-        scroll-snap-type: y mandatory;
         .countdown-container{
-            scroll-snap-align: start;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -32,122 +24,151 @@ main{
             @include media-query-maxitablet{
                 margin-top: 50px;
             }
-            h2{
-                color: var(--main-color);
-                font-size: 100px;
-                font-weight: 300;
-                @include media-query-maxitablet{
-                    font-size: 100px;
-                }
-            }
-            
-            h3{
-                color: var(--main-color);
-                font-family: 'Open Sans', sans-serif;
-                font-weight: 300;
-                font-size: 150px;
-                @include media-query-maxitablet{
-                    font-size: 200px;
-                }
-            }
-            
-            .message{
+            .texto{
                 text-align: center;
-                font-weight: 500;
-                font-size: 60px;
-                @include media-query-maxitablet{
+                h2{
+                    animation: aparicion linear both;
+                    animation-timeline: view();
+                    animation-range: entry 10% cover 30%;
+                    color: var(--main-color);
                     font-size: 100px;
+                    font-weight: 300;
+                    @include media-query-maxitablet{
+                        font-size: 100px;
+                    }
+                }           
+                h3{
+                    animation: aparicion linear both;
+                    animation-timeline: view();
+                    animation-range: entry 10% cover 30%;
+                    color: var(--main-color);
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 300;
+                    font-size: 150px;
+                    @include media-query-maxitablet{
+                        font-size: 200px;
+                    }
+                }         
+                .message{
+                    animation: aparicion linear both;
+                    animation-timeline: view();
+                    animation-range: entry 10% cover 30%;
+                    text-align: center;
+                    font-weight: 500;
+                    font-size: 60px;
+                    @include media-query-maxitablet{
+                        font-size: 100px;
+                    }
                 }
             }
         }
         .save-date{
-            scroll-snap-align: start;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 60%;
-            margin: auto;
-            .fuegos{
-                width: 40%;
-            }
-            h4{
-                color: var(--main-color);
-                font-family: 'Open Sans', sans-serif;
-                font-size: 24px;
-                font-weight: 500;
-                text-align: center;
-                padding: 10px 0;
-                @include media-query-maxitablet{
+            .texto-date{
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 60%;
+                margin: auto;
+                .fuegos{
+                    width: 40%;
+                    animation: aparicion linear both;
+                    animation-timeline: view();
+                    animation-range: entry 10% cover 30%;
+                }
+                h4{
+                    color: var(--main-color);
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 24px;
+                    font-weight: 500;
+                    text-align: center;
+                    padding: 10px 0;
+                    animation: aparicion linear both;
+                    animation-timeline: view();
+                    animation-range: entry 10% cover 30%;
+                    @include media-query-maxitablet{
+                        font-size: 40px;
+                        max-width: 70%;
+                    }
+                }
+                .salon{
+                    color: var(--main-color);
+                    font-family: 'Ms Madi', sans-serif;
                     font-size: 40px;
-                    max-width: 70%;
+                    padding: 20px 0 0 0;
+                    animation: aparicion linear both;
+                    animation-timeline: view();
+                    animation-range: entry 10% cover 30%;
+                    @include media-query-maxitablet{
+                        font-size: 70px;
+                    }
                 }
-            }
-            .salon{
-                color: var(--main-color);
-                font-family: 'Ms Madi', sans-serif;
-                font-size: 40px;
-                padding: 20px 0 0 0;
-                @include media-query-maxitablet{
-                    font-size: 70px;
+                p{
+                    animation: aparicion linear both;
+                    animation-timeline: view();
+                    animation-range: entry 10% cover 30%;
+                    color: var(--main-color);
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 20px;
+                    font-weight: 200;
+                    text-align: center;
+                    padding: 20px;
+                    @include media-query-maxitablet{
+                        font-size: 30px;
+                    }
                 }
-            }
-            p{
-                color: var(--main-color);
-                font-family: 'Open Sans', sans-serif;
-                font-size: 20px;
-                font-weight: 200;
-                text-align: center;
-                padding: 20px;
-                @include media-query-maxitablet{
-                    font-size: 30px;
-                }
-            }
-            .confirmation{
-                color: var(--main-color-2);
-                border: 1px solid var(--secondary-color);
-                background-color: var(--secondary-color);
-                border-radius: 10px;
-                font-family: 'Open Sans', sans-serif;
-                font-size: 20px;
-                font-weight: 500;
-                padding: 8px 12px;
-                margin-bottom: 30px;
-                text-decoration: none;
-                @include media-query-maxitablet{
-                    font-size: 30px;
-                }
-                &:hover{
-                    color: var(--secondary-color);
-                    background-color: var(--main-color-2);
+                .confirmation{
+                    animation: aparicion linear both;
+                    animation-timeline: view();
+                    animation-range: entry 10% cover 30%;
+                    color: var(--main-color-2);
                     border: 1px solid var(--secondary-color);
+                    background-color: var(--secondary-color);
+                    border-radius: 10px;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 20px;
+                    font-weight: 500;
+                    padding: 8px 12px;
+                    margin-bottom: 30px;
+                    text-decoration: none;
+                    @include media-query-maxitablet{
+                        font-size: 30px;
+                    }
+                    &:hover{
+                        color: var(--secondary-color);
+                        background-color: var(--main-color-2);
+                        border: 1px solid var(--secondary-color);
+                    }
+                    &:active{
+                        color: var(--secondary-color);
+                        background-color: var(--main-color-2);
+                        border: 1px solid var(--secondary-color);
+                    }              
                 }
-                &:active{
-                    color: var(--secondary-color);
-                    background-color: var(--main-color-2);
-                    border: 1px solid var(--secondary-color);
-                }              
-            }
-            .dress-code{
-            text-align: center;
-            padding-bottom: 20px;
-            h5{
-                font-family: 'Open Sans', sans-serif;
-                font-size: 20px;
-                color: var(--main-color);
-                @include media-query-maxitablet{
-                    font-size: 30px;
+                .dress-code{
+                    animation: aparicion linear both;
+                    animation-timeline: view();
+                    animation-range: entry 10% cover 30%;
+                    text-align: center;
+                    padding-bottom: 20px;
+                    h5{
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        color: var(--main-color);
+                        @include media-query-maxitablet{
+                            font-size: 30px;
+                        }
+                    }
+                    p{
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 18px;
+                        color: var(--main-color);
+                        @include media-query-maxitablet{
+                            font-size: 26px;
+                        }
+                    }
                 }
-            }
-            p{
-                font-family: 'Open Sans', sans-serif;
-                font-size: 18px;
-                color: var(--main-color);
-                @include media-query-maxitablet{
-                    font-size: 26px;
-                }
-            }
             }
         }
         .add-date{
@@ -182,73 +203,77 @@ main{
             } 
         }
         #civil{
-            scroll-snap-align: start;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            width: 70%;
-            margin: auto;
-            .anillos{
-                width: 30%;
-            }
-            h4{
-                color: var(--main-color);
-                font-family: 'Open Sans', sans-serif;
-                font-size: 24px;
-                font-weight: 600;
-                text-align: center;
-                padding-bottom: 10px;
-            }
-            h3{
-            color: var(--main-color);
-                font-family: 'Open Sans', sans-serif;
-                font-size: 26px;
-                font-weight: 400;
-                text-align: center; 
-                padding: 10px 0;
+            .texto-civil{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                width: 70%;
+                margin: auto;
+                .anillos{
+                    animation: aparicion linear both;
+                    animation-timeline: view();
+                    animation-range: entry 10% cover 30%;
+                    width: 30%;
+                }
+                h4{
+                    animation: aparicion linear both;
+                    animation-timeline: view();
+                    animation-range: entry 10% cover 30%;
+                    color: var(--main-color);
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 24px;
+                    font-weight: 600;
+                    text-align: center;
+                    padding-bottom: 10px;
+                }
+                h3{
+                    animation: aparicion linear both;
+                    animation-timeline: view();
+                    animation-range: entry 10% cover 30%;
+                    color: var(--main-color);
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 26px;
+                    font-weight: 400;
+                    text-align: center; 
+                    padding: 10px 0;
+                }
             }
         }
     }
 }
 
-#carrusel, #carrusel2{
-    scroll-snap-align: start;
-    height: 100vh;
-    .carrusel{
-        height: 100vh;
-        background-color: var(--main-color-2);
-        height: auto;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-        .imagen{
+.carrusel{
+    background-color: var(--main-color-2);
+    height: auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    .imagen{
+        height: 280px;
+        animation: scroll 40s linear infinite;
+        -webkit-animation: scroll 40s linear infinite;
+        @keyframes scroll{
+        0%{
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100%{
+            -webkit-transform: translateX(calc(-200px * 13));
+            transform: translateX(calc(-200px * 13));
+        }
+        }
+        img{
             height: 280px;
-            animation: scroll 40s linear infinite;
-            -webkit-animation: scroll 40s linear infinite;
-            @keyframes scroll{
-            0%{
-                -webkit-transform: translateX(0);
-                transform: translateX(0);
-            }
-            100%{
-                -webkit-transform: translateX(calc(-200px * 13));
-                transform: translateX(calc(-200px * 13));
-            }
-            }
-            img{
-                height: 280px;
-                border-radius: 10px;
-                margin: 0 5px;
-            }
+            border-radius: 10px;
+            margin: 0 5px;
         }
     }
 }
 
 
 #photo-app{
-    scroll-snap-align: start;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -257,6 +282,9 @@ main{
     text-align: center;
     padding-bottom: 20px;
     h5{
+        animation: aparicion linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 30%;
         font-family: 'Open-Sans', sans-serif;
         font-size: 18px;
         color: var(--main-color-2);
@@ -267,6 +295,9 @@ main{
         }
     }
     .teams{
+        animation: aparicion linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 30%;
         display: flex;
         justify-content: space-evenly;
         text-align: center;
@@ -292,6 +323,9 @@ main{
     }
     
     .qr img{
+        animation: aparicion linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 30%;
         height: 100px;
         padding-bottom: 10px;
         @include media-query-maxitablet{
@@ -300,6 +334,9 @@ main{
         }
     }
     .link-container{
+        animation: aparicion linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 30%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -320,7 +357,6 @@ main{
 }
 
 #gift{
-    scroll-snap-align: start;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -328,9 +364,15 @@ main{
     align-items: center;
     img{
         width: 20%;
+        animation: aparicion linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 30%;
     }
     .futuro{
         width: 90%;
+        animation: aparicion linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 30%;
         @include media-query-maxitablet{
             width: 80%;
         }
@@ -347,6 +389,9 @@ main{
         }
     }
     .present{
+            animation: aparicion linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 30%;
         color: var(--main-color);
         font-family: 'Open Sans', sans-serif;
         font-size: 16px;
@@ -358,6 +403,9 @@ main{
         }
     }
     .info{
+        animation: aparicion linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 30%;
         text-align: center;
         padding: 20px;
         margin-top: 20px;
@@ -379,7 +427,6 @@ main{
 }
 
 #game{
-    scroll-snap-align: start;
     background-color: var(--secondary-color);
     text-align: center;
     height: 100vh;
@@ -389,18 +436,27 @@ main{
     align-items: center;
     img{
         width: 20%;
+        animation: aparicion linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 30%;
     }
     h5{
         font-family: 'Open-Sans', sans-serif;
         font-size: 20px;
         color: var(--main-color-2);
         padding: 24px 40px;
+        animation: aparicion linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 30%;
         @include media-query-maxitablet{
             font-size: 30px;
             padding: 24px 10px;
         }
     }
     p{
+        animation: aparicion linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 30%;
         font-size: 16px;
         color: var(--main-color-2);
         font-family: 'Open-Sans', sans-serif;
@@ -413,6 +469,9 @@ main{
         }
     }
     .game-button{
+        animation: aparicion linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 30%;
         color: var(--secondary-color);
         border: 1px solid var(--secondary-color);
         background-color: var(--main-color-2);
@@ -439,8 +498,6 @@ main{
 }
 
 #see-you{
-    scroll-snap-align: start;
-    height: 100vh;
     font-size: 30px;
     color: var(--main-color);
     text-align: center;
