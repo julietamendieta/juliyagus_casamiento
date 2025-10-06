@@ -29,8 +29,8 @@
         text-align: center;
         z-index: 100;
         background-color: var(--main-color-2);
-        position: absolute;
-        bottom: 0;
+        position: sticky;
+        top: 100vh;
         width: 100%;
         opacity: 90%;
         }
@@ -88,6 +88,20 @@
             }
         }
     }
+
+    #foto1{
+        scroll-snap-align: start;
+        height: 100vh;
+        background-image: url(../../images/1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include media-query-mobile{
+            background-image: url(../../images/43.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
     #save-date{
         scroll-snap-align: start;
         .texto-date{
@@ -178,6 +192,19 @@
         }
     }
 
+    #foto2{
+        scroll-snap-align: start;
+        height: 100vh;
+        background-image: url(../../images/34.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include media-query-mobile{
+            background-image: url(../../images/73.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
     #civil{
         scroll-snap-align: start;
         .texto-civil{
@@ -225,6 +252,19 @@
                     font-size: 46px;
                 }
             }
+        }
+    }
+
+    #foto3{
+        scroll-snap-align: start;
+        height: 100vh;
+        background-image: url(../../images/52.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include media-query-mobile{
+            background-image: url(../../images/41.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
         }
     }
 
@@ -312,6 +352,19 @@
         }
     }
 
+    #foto4{
+        scroll-snap-align: start;
+        height: 100vh;
+        background-image: url(../../images/70.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include media-query-mobile{
+            background-image: url(../../images/4.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
     #gift{
         scroll-snap-align: start;
         height: 100vh;
@@ -383,6 +436,19 @@
                     font-size: 40px;
                 }
             }
+        }
+    }
+
+    #foto5{
+        scroll-snap-align: start;
+        height: 100vh;
+        background-image: url(../../images/39.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include media-query-mobile{
+            background-image: url(../../images/71.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
         }
     }
 
@@ -462,15 +528,37 @@
     }
 
     #see-you{
-        font-size: 30px;
-        color: var(--main-color);
-        text-align: center;
-        padding-top: 50px;
-        padding-bottom: 30px;
-        @include media-query-maxitablet{
-            font-size: 70px;
-            padding-bottom: 30px;
+        scroll-snap-align: start;
+        height: 100vh;
+        background-image: url(../../images/7.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include media-query-mobile{
+            background-image: url(../../images/76.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h3{
+            font-size: 40px;
+            color: var(--main-color);
+            background-color: var(--main-color-2);
+            position: sticky;
+            top: 100vh;
+            width: 100%;
+            height: 50px;
+            padding: 10px 0;
+            z-index: 100;
+            text-align: center;
+            @include media-query-maxitablet{
+                font-size: 70px;
+                padding-bottom: 30px;
+            }
+            @include media-query-mobile{
+                position: sticky;
+                top: 30vh;
+                color: var(--main-color-2);
+                background-color: unset;
+            }
         }
     }
 }
-

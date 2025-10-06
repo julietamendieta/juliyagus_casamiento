@@ -66,8 +66,8 @@ body {
   text-align: center;
   z-index: 100;
   background-color: var(--main-color-2);
-  position: absolute;
-  bottom: 0;
+  position: sticky;
+  top: 100vh;
   width: 100%;
   opacity: 90%;
 }
@@ -127,6 +127,20 @@ body {
 @media (min-width: 1024px) and (max-width: 2400px) {
   #secciones #date .date .countdown-container .texto .message {
     font-size: 100px;
+  }
+}
+#secciones #foto1 {
+  scroll-snap-align: start;
+  height: 100vh;
+  background-image: url(../../images/1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  #secciones #foto1 {
+    background-image: url(../../images/43.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 #secciones #save-date {
@@ -228,6 +242,20 @@ body {
   background-color: var(--main-color-2);
   border: 1px solid var(--secondary-color);
 }
+#secciones #foto2 {
+  scroll-snap-align: start;
+  height: 100vh;
+  background-image: url(../../images/34.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  #secciones #foto2 {
+    background-image: url(../../images/73.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
 #secciones #civil {
   scroll-snap-align: start;
 }
@@ -281,6 +309,20 @@ body {
 @media (min-width: 1024px) and (max-width: 2400px) {
   #secciones #civil .texto-civil h3 {
     font-size: 46px;
+  }
+}
+#secciones #foto3 {
+  scroll-snap-align: start;
+  height: 100vh;
+  background-image: url(../../images/52.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  #secciones #foto3 {
+    background-image: url(../../images/41.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 #secciones #photo-app {
@@ -373,6 +415,20 @@ body {
     padding: 30px 10px;
   }
 }
+#secciones #foto4 {
+  scroll-snap-align: start;
+  height: 100vh;
+  background-image: url(../../images/70.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  #secciones #foto4 {
+    background-image: url(../../images/4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
 #secciones #gift {
   scroll-snap-align: start;
   height: 100vh;
@@ -458,6 +514,20 @@ body {
     font-size: 40px;
   }
 }
+#secciones #foto5 {
+  scroll-snap-align: start;
+  height: 100vh;
+  background-image: url(../../images/39.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  #secciones #foto5 {
+    background-image: url(../../images/71.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
 #secciones #game {
   scroll-snap-align: start;
   background-color: var(--secondary-color);
@@ -541,16 +611,43 @@ body {
   border: 1px solid var(--main-color-2);
 }
 #secciones #see-you {
-  font-size: 30px;
+  scroll-snap-align: start;
+  height: 100vh;
+  background-image: url(../../images/7.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  #secciones #see-you {
+    background-image: url(../../images/76.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+#secciones #see-you h3 {
+  font-size: 40px;
   color: var(--main-color);
+  background-color: var(--main-color-2);
+  position: sticky;
+  top: 100vh;
+  width: 100%;
+  height: 50px;
+  padding: 10px 0;
+  z-index: 100;
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 30px;
 }
 @media (min-width: 1024px) and (max-width: 2400px) {
-  #secciones #see-you {
+  #secciones #see-you h3 {
     font-size: 70px;
     padding-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  #secciones #see-you h3 {
+    position: sticky;
+    top: 30vh;
+    color: var(--main-color-2);
+    background-color: unset;
   }
 }
 
