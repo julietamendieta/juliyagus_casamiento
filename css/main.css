@@ -47,7 +47,7 @@ body {
 }
 #secciones .photo {
   scroll-snap-align: start;
-  height: 100vh;
+  height: 90vh;
   background-image: url(../../images/72.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -645,7 +645,7 @@ body {
 @media (max-width: 768px) {
   #secciones #see-you h3 {
     position: sticky;
-    top: 30vh;
+    top: 10vh;
     color: var(--main-color-2);
     background-color: unset;
   }
