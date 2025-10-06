@@ -555,7 +555,7 @@
             }
             @include media-query-mobile{
                 position: sticky;
-                top: 30vh;
+                top: 10vh;
                 color: var(--main-color-2);
                 background-color: unset;
             }
