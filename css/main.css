@@ -11,18 +11,6 @@ body {
   */
 }
 
-/*
-@keyframes aparicion{
-    from{
-        opacity: 0;
-        scale: 25%;
-    }
-    to{
-        opacity: 1;
-        scale: 100%;
-    }
-}
-*/
 * {
   margin: 0;
   padding: 0;
@@ -40,6 +28,16 @@ body {
     opacity: 0;
   }
 }
+@keyframes aparicion {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
 #secciones {
   scroll-snap-type: y mandatory;
   height: 100vh;
@@ -47,7 +45,7 @@ body {
 }
 #secciones .photo {
   scroll-snap-align: start;
-  height: 90vh;
+  height: 100vh;
   background-image: url(../../images/72.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -67,12 +65,47 @@ body {
   z-index: 100;
   background-color: var(--main-color-2);
   position: sticky;
-  top: 100vh;
+  top: 80vh;
   width: 100%;
   opacity: 90%;
 }
+@keyframes flores {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
 #secciones #date {
   scroll-snap-align: start;
+  position: relative;
+}
+#secciones #date .date .borde {
+  width: 150px;
+}
+#secciones #date .date .borde1 {
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+}
+#secciones #date .date .borde2 {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+#secciones #date .date .borde3 {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+#secciones #date .date .borde4 {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
 }
 #secciones #date .date .countdown-container {
   height: 100vh;
@@ -145,6 +178,30 @@ body {
 }
 #secciones #save-date {
   scroll-snap-align: start;
+  position: relative;
+}
+#secciones #save-date .borde {
+  width: 150px;
+}
+#secciones #save-date .borde1 {
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+}
+#secciones #save-date .borde2 {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+#secciones #save-date .borde3 {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+#secciones #save-date .borde4 {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
 }
 #secciones #save-date .texto-date {
   height: 100vh;
@@ -154,17 +211,6 @@ body {
   justify-content: center;
   width: 60%;
   margin: auto;
-}
-#secciones #save-date .texto-date .fuegos {
-  width: 40%;
-  animation: aparicion linear both;
-  animation-timeline: view();
-  animation-range: entry 10% cover 30%;
-}
-@media (min-width: 1024px) and (max-width: 2400px) {
-  #secciones #save-date .texto-date .fuegos {
-    width: 20%;
-  }
 }
 #secciones #save-date .texto-date h4 {
   color: var(--main-color);
@@ -215,7 +261,7 @@ body {
 #secciones #save-date .texto-date .confirmation {
   animation: aparicion linear both;
   animation-timeline: view();
-  animation-range: entry 10% cover 30%;
+  animation-range: entry 0% cover 10%;
   color: var(--main-color-2);
   border: 1px solid var(--secondary-color);
   background-color: var(--secondary-color);
@@ -395,13 +441,18 @@ body {
 #secciones #photo-app .link-container {
   animation: aparicion linear both;
   animation-timeline: view();
-  animation-range: entry 10% cover 30%;
+  animation-range: entry 0% cover 10%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #secciones #photo-app .link-container .link-app {
   padding: 10px;
+}
+#secciones #photo-app .link-container h5 {
+  animation: aparicion linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 10%;
 }
 #secciones #photo-app .link-container a {
   color: var(--main-color-2);
