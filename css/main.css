@@ -85,27 +85,52 @@ body {
   position: relative;
 }
 #secciones #date .date .borde {
-  width: 150px;
+  width: 100px;
 }
 #secciones #date .date .borde1 {
   position: absolute;
-  bottom: 1px;
-  left: 1px;
+  bottom: 15vh;
+  left: 10vw;
 }
 #secciones #date .date .borde2 {
   position: absolute;
-  top: 1px;
-  left: 1px;
+  top: 15vh;
+  left: 10vw;
 }
 #secciones #date .date .borde3 {
   position: absolute;
-  top: 1px;
-  right: 1px;
+  top: 15vh;
+  right: 10vw;
 }
 #secciones #date .date .borde4 {
   position: absolute;
-  bottom: 1px;
-  right: 1px;
+  bottom: 15vh;
+  right: 10vw;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #secciones #date .date .borde {
+    width: 200px;
+  }
+  #secciones #date .date .borde1 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  #secciones #date .date .borde2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  #secciones #date .date .borde3 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  #secciones #date .date .borde4 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
 }
 #secciones #date .date .countdown-container {
   height: 100vh;
@@ -185,23 +210,48 @@ body {
 }
 #secciones #save-date .borde1 {
   position: absolute;
-  bottom: 1px;
-  left: 1px;
+  bottom: 15vh;
+  left: 10vw;
 }
 #secciones #save-date .borde2 {
   position: absolute;
-  top: 1px;
-  left: 1px;
+  top: 15vh;
+  left: 10vw;
 }
 #secciones #save-date .borde3 {
   position: absolute;
-  top: 1px;
-  right: 1px;
+  top: 15vh;
+  right: 10vw;
 }
 #secciones #save-date .borde4 {
   position: absolute;
-  bottom: 1px;
-  right: 1px;
+  bottom: 15vh;
+  right: 10vw;
+}
+@media (min-width: 1024px) and (max-width: 2400px) {
+  #secciones #save-date .borde {
+    width: 200px;
+  }
+  #secciones #save-date .borde1 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  #secciones #save-date .borde2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  #secciones #save-date .borde3 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  #secciones #save-date .borde4 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
 }
 #secciones #save-date .texto-date {
   height: 100vh;

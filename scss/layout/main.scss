@@ -64,27 +64,52 @@
         position: relative;
         .date{
             .borde{
-                width: 150px;
+                width: 100px;
             }
             .borde1{
                 position: absolute;
-                bottom: 1px;
-                left: 1px;
+                bottom: 15vh;
+                left: 10vw;
             }
             .borde2{
                 position: absolute;
-                top: 1px;
-                left: 1px;
+                top: 15vh;
+                left: 10vw;
             }
             .borde3{
                 position: absolute;
-                top: 1px;
-                right: 1px;
+                top: 15vh;
+                right: 10vw;
             }
             .borde4{
                 position: absolute;
-                bottom: 1px;
-                right: 1px;
+                bottom: 15vh;
+                right: 10vw;
+            }
+            @include media-query-maxitablet{
+                .borde{
+                    width: 200px;
+                }
+                .borde1{
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+                }
+                .borde2{
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                }
+                .borde3{
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                }
+                .borde4{
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                }
             }
             .countdown-container{
                 height: 100vh;
@@ -157,24 +182,49 @@
             }
             .borde1{
                 position: absolute;
-                bottom: 1px;
-                left: 1px;
+                bottom: 15vh;
+                left: 10vw;
             }
             .borde2{
                 position: absolute;
-                top: 1px;
-                left: 1px;
+                top: 15vh;
+                left: 10vw;
             }
             .borde3{
                 position: absolute;
-                top: 1px;
-                right: 1px;
+                top: 15vh;
+                right: 10vw;
             }
             .borde4{
                 position: absolute;
-                bottom: 1px;
-                right: 1px;
+                bottom: 15vh;
+                right: 10vw;
             }
+        @include media-query-maxitablet{
+            .borde{
+                width: 200px;
+            }
+            .borde1{
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+            }
+            .borde2{
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+            .borde3{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+            .borde4{
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+            }
+        }
         .texto-date{
             height: 100vh;
             display: flex;
