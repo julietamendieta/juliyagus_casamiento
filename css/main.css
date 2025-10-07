@@ -38,10 +38,63 @@ body {
     scale: 100%;
   }
 }
+@keyframes barra {
+  /*from{width: 0%;}
+  to{width: 100%;}*/
+  0% {
+    width: 0%;
+  }
+  7% {
+    width: 7.7%;
+  }
+  14% {
+    width: 15.4%;
+  }
+  21% {
+    width: 23.1%;
+  }
+  28% {
+    width: 30.8%;
+  }
+  35% {
+    width: 38.5%;
+  }
+  42% {
+    width: 46.2%;
+  }
+  49% {
+    width: 53.9%;
+  }
+  56% {
+    width: 61.6%;
+  }
+  62% {
+    width: 69.3%;
+  }
+  71% {
+    width: 77%;
+  }
+  80% {
+    width: 84.7%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 #secciones {
   scroll-snap-type: y mandatory;
   height: 100vh;
-  overflow: auto;
+  overflow-y: scroll;
+  scroll-timeline: --secciones;
+}
+#secciones #barra {
+  background-color: var(--main-color);
+  width: 0%;
+  height: 10px;
+  z-index: 1000;
+  position: fixed;
+  animation-name: barra;
+  animation-timeline: --secciones;
 }
 #secciones .photo {
   scroll-snap-align: start;
