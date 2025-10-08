@@ -236,22 +236,22 @@
             }
             .borde1{
                 position: absolute;
-                bottom: 15vh;
+                bottom: 8vh;
                 left: 10vw;
             }
             .borde2{
                 position: absolute;
-                top: 15vh;
+                top: 8vh;
                 left: 10vw;
             }
             .borde3{
                 position: absolute;
-                top: 15vh;
+                top: 8vh;
                 right: 10vw;
             }
             .borde4{
                 position: absolute;
-                bottom: 15vh;
+                bottom: 8vh;
                 right: 10vw;
             }
         @include media-query-maxitablet{
@@ -298,7 +298,7 @@
                 animation-timeline: view();
                 animation-range: entry 10% cover 30%;
                 @include media-query-maxitablet{
-                    font-size: 80px;
+                    font-size: 50px;
                     max-width: 70%;
                 }
             }
@@ -310,13 +310,13 @@
                 animation-timeline: view();
                 animation-range: entry 10% cover 30%;
                 @include media-query-maxitablet{
-                    font-size: 100px;
+                    font-size: 80px;
                 }
             }
             p{
                 animation: aparicion linear both;
                 animation-timeline: view();
-                animation-range: entry 10% cover 30%;
+                animation-range: entry 10% cover 20%;
                 color: var(--main-color);
                 font-family: 'Open Sans', sans-serif;
                 font-size: 20px;
@@ -339,10 +339,9 @@
                 font-size: 20px;
                 font-weight: 500;
                 padding: 8px 12px;
-                margin-bottom: 30px;
                 text-decoration: none;
                 @include media-query-maxitablet{
-                    font-size: 50px;
+                    font-size: 40px;
                 }
                 &:hover{
                     color: var(--secondary-color);
@@ -354,6 +353,19 @@
                     background-color: var(--main-color-2);
                     border: 1px solid var(--secondary-color);
                 }              
+            }
+            .restriccion{
+                animation: aparicion linear both;
+                animation-timeline: view();
+                animation-range: entry 0% cover 10%;
+                color: var(--main-color);
+                font-family: 'Open Sans', sans-serif;
+                font-size: 16px;
+                margin-top: 12px;
+                @include media-query-maxitablet{
+                    font-size: 30px;
+                    margin-top: 14px;
+                }
             }
         }
     }
